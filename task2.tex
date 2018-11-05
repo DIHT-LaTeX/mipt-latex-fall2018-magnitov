@@ -1,13 +1,12 @@
 \documentclass[11pt]{article}
 \usepackage[russian]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[a5paper, top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+\usepackage[a5paper, top=1cm, bottom=1cm, left=1cm, right=1cm, footskip=0cm]{geometry}
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{eufrak}
 \usepackage{wasysym}
-\pagenumbering{gobble}
 
 \newcounter{astrocounter}
 \renewcommand{\theastrocounter}{\thesection.\arabic{astrocounter}}
@@ -34,7 +33,7 @@
 
     \section[]{Гауссовские случайные векторы}
         \begin{definition}
-            Случайный вектор $\vec {\xi} \sim \mathcal{N}(m,\Sigma)$~--- гауссовский, если его характеристическая функция $\varphi_{\xi}(\vec{t}) = \exp{(i(\vec{m}, \vec{t}) - \frac{1}{2}(\Sigma \vec{t}, \vec{t} ))}$, $\vec{m} \in \mathbb{R}^n$, $\Sigma$~--- симметричная неотрицательно определенная матрица.
+            Случайный вектор $\vec {\xi} \sim \mathcal{N}(m,\Sigma)$~--- гауссовский, если его характеристическая функция $\varphi_{\xi}(\vec{t}\,) = \exp{\left(i\left(\vec{m\,}, \vec{t\,}\right) - \frac{1}{2}\left(\Sigma \vec{t}\,, \vec{t}\, \right)\right)}$, $\vec{m} \in \mathbb{R}^n$, $\Sigma$~--- симметричная неотрицательно определенная матрица.
         \end{definition}
 
         \begin{definition}
@@ -42,7 +41,7 @@
         \end{definition}
         
         \begin{definition}
-            Случайный вектор $\vec {\xi}$ --- гауссовский, если $\forall\lambda \in \mathbb{R}^n$ случайная величина $(\vec \lambda, \vec {\xi})$ имеет нормальное распределение.
+            Случайный вектор $\vec {\xi}$ --- гауссовский, если $\forall\lambda \in \mathbb{R}^n$ случайная величина $(\vec \lambda\,, \vec {\xi}\,)$ имеет нормальное распределение.
         \end{definition}
         
         \begin{theorem}[Об эквивалентности определений гауссовских векторов]
@@ -56,7 +55,7 @@
         \end{astronomy}
         
         \begin{astronomy}{Бейрут}
-            В какой момент по истинному солнечному времени 1 сентября Регул ($\alpha_1 = 10^{\text{h}}\,9^{\text{m}}, \delta_1 = 11^{\circ}\,53'$) и Шератан ($\alpha_2 = 11^{\text{h}},\15^{\text{m}}, \delta_2 = 15^{\circ}\,20'$) находятся на одном альмукантрате в Бейруте ($\varphi = 33^{\circ}53'$)?
+            В какой момент по истинному солнечному времени 1 сентября Регул ($\alpha_1 = 10^{\text{h}}\,9^{\text{m}}, \delta_1 = 11^{\circ}\,53'$) и Шератан ($\alpha_2 = 11^{\text{h}}\,15^{\text{m}}, \delta_2 = 15^{\circ}\,20'$) находятся на одном альмукантрате в Бейруте ($\varphi = 33^{\circ}53'$)?
         \end{astronomy}
     
         \begin{astronomy}{Dark Matters}
@@ -74,13 +73,13 @@
             Определите большую полуось и эксцентриситет полученной орбиты, скорость старта с поверхности Земли, а также угол между направлением на Солнце и на Сатурн в момент старта корабля. Орбиты планет считать круговыми. Оцените относительную скорость корабля и астероида в момент сближения.
         \end{astronomy}
         
-	\newpage
-        \section{Отзыв}
-            \begin{itemize}
-                \item[$\checkmark$] Полезные домашки, позволяющие разобраться с материалом и сразу использовать много показанных функций и тонкостей на лекции
-                \item[$\times$] Многовато домашки за раз, возможно стоит давать меньшими порциями (касается конкретно этого задания)
-                \item[$\times$] Было вообще ничего не понятно про окружение и счетчики, было мало примеров на эту тему. Было бы хорошо показать, как это делать, на лекции (какой-нибудь аналог домашней работы)
-            \end{itemize}
+    \newpage
+    \section{Отзыв}
+        \begin{itemize}
+            \item[$\checkmark$] Полезные домашки, позволяющие разобраться с материалом и сразу использовать много показанных функций и тонкостей на лекции
+            \item[$\times$] Многовато домашки за раз, возможно стоит давать меньшими порциями (касается конкретно этого задания)
+            \item[$\times$] Было вообще ничего не понятно про окружение и счетчики, было мало примеров на эту тему. Было бы хорошо показать, как это делать, на лекции (какой-нибудь аналог домашней работы)
+        \end{itemize}
 
 \end{document}
 
