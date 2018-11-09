@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[a5paper, top=2cm, bottom=2cm, left=1cm, right=1cm]{geometry}
+\usepackage{indentfirst}
+\renewcommand{\thesection}{\thechapter\arabic{section}.}
+
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\usepackage{color}
+\definecolor{mygreen}{RGB}{0,128,0}
+\definecolor{myred}{RGB}{195,33,33}
+\definecolor{mypurple}{RGB}{170,34,255}
+
+\usepackage{listings}
+\lstset{
+backgroundcolor=\color{white},
+basicstyle=\small\ttfamily,
+breaklines=true,
+frame=single,
+keywordstyle=\color{mygreen},
+language=Python,
+morekeywords={*,as},
+numbers=left,
+numbersep=10pt,
+numberstyle=\scriptsize\sffamily\color{gray},
+stringstyle=\color{myred},
+tabsize=4,
+showstringspaces=false,
+literate=
+    {*}{{\textcolor{mypurple}{*}}}{1}
+    {+}{{\textcolor{mypurple}{+}}}{1},
+}
+
+\usepackage{fancyhdr}
+\renewcommand{\footrulewidth}{0.2mm}
+\renewcommand{\headrulewidth}{0.2mm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{Последнее задание по \LaTeX\,\,на курсе от Студсовета ФИВТ}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{\leftmark}
+
+\begin{document}
+    
+    \section{Код}
+        Для исследования экспериментальной зависимости вида $y = ax+b$ был написан следующий код на языке Python:
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}{0.78\textwidth}
+                \lstinputlisting{gen.py}
+            \end{subfigure}
+        \end{figure}
+
+    \newpage
+    \section{График}
+        МНК по сгенерированным данным для исследования этой линейной зависимости дает следующие результаты: $a = 3.0612$, $b = 2.6882$. Изобразим на графике сгенерированные точки и их линейную аппроксимацию.
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}
+                \begin{axis}[grid=major, ymax=40, ymin=-40, legend pos=south east, legend style={font=\small}, legend entries={Сгенерированные данные, Линейная аппроксимация}, width=0.8\textwidth, height=0.6\textwidth, xtick={-10,-5, ...,10}, ytick={-30, -15, ..., 30}]
+                    \addplot+[x=x, y=y, myred, only marks, mark=o, fill opacity=0.1, mark size=1.5] table{data.dat};
+                    \addplot+[domain=-10:10, mygreen, line width=1pt, no marks]{3.0612 * x + 2.6882};
+                    \node at (axis cs:2,1) [anchor=south west] {$y = 3.0612x + 2.6882$};
+                \end{axis}
+            \end{tikzpicture}
+        \end{figure}
+        
+\end{document}
