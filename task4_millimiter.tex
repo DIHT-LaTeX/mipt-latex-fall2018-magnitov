@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage[a4paper, top=0.8cm, bottom=0.8cm, left=0.4cm, right=0.4cm]{geometry}
+\usepackage{tikz}
+\pagenumbering{gobble}
+
+\begin{document}
+    \begin{tikzpicture}[semitransparent]
+        \draw[step=1mm, line width=0.1mm, orange!35!white] (0,0) grid (19cm,28cm);
+        \draw[step=5mm, line width=0.2mm, orange!45!white] (0,0) grid (19cm,28cm);
+        \draw[step=1cm, line width=0.3mm, orange!60!white] (0,0) grid (19cm,28cm);
+        \draw[step=5cm, line width=0.5mm, orange!70!white] (0,0) grid (19cm,28cm);
+    \end{tikzpicture}
+\end{document}
